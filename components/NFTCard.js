@@ -4,6 +4,7 @@ import React from 'react';
 
 import { COLORS, SIZES, SHADOWS, assets } from '../constants';
 import { CircleButton, RectButton } from './Button';
+import { SubInfo, NFTTitle, EthPrice } from './SubInfo';
 
 const NFTCard = ({ data }) => {
   const navigation = useNavigation();
@@ -36,7 +37,30 @@ const NFTCard = ({ data }) => {
         ></Image>
         <CircleButton imgUrl={assets.heart} right={10} top={10}></CircleButton>
       </View>
-      {/* <Text>NFTCard</Text> */}
+      <SubInfo></SubInfo>
+      <View style={{ width: '100%', padding: SIZES.font }}>
+        <NFTTitle
+          title={data.name}
+          subTitle={data.creator}
+          titleSize={SIZES.large}
+          subTitleSize={SIZES.small}
+        ></NFTTitle>
+        <View
+          style={{
+            marginTop: SIZES.font,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}
+        >
+          <EthPrice price={data.price}></EthPrice>
+          <RectButton
+            minWidth={120}
+            fontSize={SIZES.font}
+            handlePress={() => navigation.navigate('Details', { data })}
+          ></RectButton>
+        </View>
+      </View>
     </View>
   );
 };
