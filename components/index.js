@@ -1,11 +1,30 @@
-export { default as HomeHeader } from './HomeHeader';
-export { default as FocusedStatusBar } from './FocusedStatusBar';
-export { default as NFTCard } from './NFTCard';
-export { default as CircleButton } from './Button';
-export { default as RectButton } from './Button';
-export { default as SubInfo } from './SubInfo';
-export { default as EthPrice } from './SubInfo';
-export { default as EndDate } from './SubInfo';
-export { default as People } from './SubInfo';
-export { default as NFTTitle } from './SubInfo';
-export { default as ImageCmp } from './SubInfo';
+import HomeHeader from './HomeHeader';
+import FocusedStatusBar from './FocusedStatusBar';
+import NFTCard from './NFTCard';
+import DetailsBid from './DetailsBid';
+import DetailsDesc from './DetailsDesc';
+import {
+  SubInfo,
+  EthPrice,
+  EndDate,
+  People,
+  NFTTitle,
+  ImageCmp,
+} from './SubInfo';
+import { CircleButton, RectButton } from './Button';
+
+export {
+  HomeHeader,
+  DetailsDesc,
+  DetailsBid,
+  FocusedStatusBar,
+  NFTCard,
+  SubInfo,
+  EthPrice,
+  EndDate,
+  People,
+  NFTTitle,
+  ImageCmp,
+  CircleButton,
+  RectButton,
+};
